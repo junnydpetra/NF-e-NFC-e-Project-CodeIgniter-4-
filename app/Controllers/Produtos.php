@@ -40,7 +40,7 @@ class Produtos extends BaseController
         return "Novo produto!";
     }
 
-    public function model()
+    /* public function model()
     {
         $produto_model = new ProdutoModel();
         
@@ -56,6 +56,15 @@ class Produtos extends BaseController
         $produto_model->where('id', 3)
                       ->set($dados)
                       ->update();
+
+    } */
+
+    public function model()
+    {
+        $produto_model = new ProdutoModel();
+
+        $produto_model->where('id', 2)
+                      ->delete();
 
     }
 }
