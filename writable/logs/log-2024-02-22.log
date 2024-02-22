@@ -117,3 +117,79 @@ Stack trace:
 #8 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
 #9 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\spark(97): CodeIgniter\CLI\Console->run()
 #10 {main}
+CRITICAL - 2024-02-22 14:13:07 --> Undefined array key "id"
+in APPPATH\Views\produtos\index.php on line 28.
+ 1 APPPATH\Views\produtos\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\produtos\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\produtos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('produtos/index', [], true)
+ 5 APPPATH\Controllers\Produtos.php(34): view('produtos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-22 14:13:18 --> Undefined array key "id"
+in APPPATH\Views\produtos\index.php on line 28.
+ 1 APPPATH\Views\produtos\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\produtos\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\produtos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('produtos/index', [], true)
+ 5 APPPATH\Controllers\Produtos.php(34): view('produtos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-22 17:58:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3' at line 2 in C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `produto...', 0)
+#1 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produto...')
+#2 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produto...')
+#3 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `produto...', Array, false)
+#4 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\app\Controllers\Produtos.php(58): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(934): App\Controllers\Produtos->model()
+#9 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+#10 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-22 17:58:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `produtos` SET `nome` = :nome:, `descricao` = :descricao:, `valor_de_compra` = :valor_de_compra:, `valor_de_venda` = :valor_de_venda:, `quantidade` = :quantidade:, `validade` = :validade:, `updated_at` = :updated_at:
+WHERE id, 3', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Produtos.php(58): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->model()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-22 17:59:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3' at line 2 in C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `produto...', 0)
+#1 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `produto...')
+#2 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `produto...')
+#3 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `produto...', Array, false)
+#4 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\Model.php(755): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\app\Controllers\Produtos.php(58): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(934): App\Controllers\Produtos->model()
+#9 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+#10 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\NF-e-NFC-e-Project-CodeIgniter-4-\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-22 17:59:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `produtos` SET `nome` = :nome:, `descricao` = :descricao:, `valor_de_compra` = :valor_de_compra:, `valor_de_venda` = :valor_de_venda:, `quantidade` = :quantidade:, `validade` = :validade:, `updated_at` = :updated_at:
+WHERE id, 3', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Produtos.php(58): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->model()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
