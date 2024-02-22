@@ -7,6 +7,6 @@
     </head>
     
     <body>
-        <h1>Teste</h1>
+        <h1 class="text-success">Teste de produtos!</h1>
     </body>
 </html>
